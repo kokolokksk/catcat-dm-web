@@ -1,10 +1,18 @@
 <script setup> 
 import { ref,reactive } from 'vue'
+import request from '../utils/request'
 // 保留颜色渐变动画
 const bgColor = "#f58051" 
 let form =reactive({}) 
 let formR = ref(null)
 formR.name = "username"
+const login = function(){
+  request('/ss/ss',form).then(e=>{
+    
+  }).catch(err=>{
+    alert(err)
+  })
+}
 </script>
 <template>
   <div id="root">
@@ -24,7 +32,7 @@ formR.name = "username"
             <template #header>
             <div class="card-header">
                 <span>CatCat Login</span>
-                <el-button class="button" type="text">Login</el-button>
+                <el-button class="button" type="text" @click="login">Login</el-button>
             </div>
             </template>
             
