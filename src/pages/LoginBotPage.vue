@@ -69,13 +69,15 @@ const login = function(){
   font-family: 'Consola';
 }
 .github{
-  left: 64vw;
-  top: 56vh;
-  display: flex;
-  position: fixed;
-  width: 30px;
-  height: 30px;
-  z-index: 100;
+    right: 50vw;
+    top: 35vh;
+    position: fixed;
+    display: flex;
+    /* flex: 1; */
+    z-index: 17;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center; 
 }
 /**
 * cat loader css
