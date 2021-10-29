@@ -18,13 +18,13 @@ const login = function(){
   <div id="root">
     <div class="waveWrapper waveAnimation">
       <div class="waveWrapperInner bgTop" :style="{backgroundImage: 'linear-gradient(to top, '+bgColor+' 20%, #27273c 80%)'}">
-        <div class="wave waveTop" style="background-image: url('/src/assets/wave-top.png')"></div>
+        <div class="wave waveTop" style="background-image: url('../assets/wave-top.png')"></div>
       </div>
       <div class="waveWrapperInner bgMiddle" :style="{backgroundImage: 'linear-gradient(to top, '+bgColor+' 20%, #27273c 80%)'}"  >
-        <div class="wave waveMiddle" style="background-image: url('/src/assets/wave-mid.png')"></div>
+        <div class="wave waveMiddle" style="background-image: url('../assets/wave-mid.png')"></div>
       </div>
       <div class="waveWrapperInner bgBottom" :style="{backgroundImage: 'linear-gradient(to top, '+bgColor+' 20%, #27273c 80%)'}">
-        <div class="wave waveBottom"   style="background-image: url('/src/assets/wave-bot.png')"></div>
+        <div class="wave waveBottom"   style="background-image: url('../assets/wave-bot.png')"></div>
       </div>
     </div>
     <div id="lcard">
