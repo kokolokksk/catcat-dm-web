@@ -68,6 +68,15 @@ const login = function(){
 *{
   font-family: 'Consola';
 }
+.github{
+  left: 64vw;
+  top: 56vh;
+  display: flex;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+}
 /**
 * cat loader css
 */
