@@ -7,11 +7,11 @@ let form =reactive({})
 let formR = ref(null)
 formR.name = "username"
 const login = function(){
-  request('/ss/ss',form).then(e=>{
+  /* request('/ss/ss',form).then(e=>{
     
   }).catch(err=>{
     alert(err)
-  })
+  }) */
 }
 </script>
 <template>
@@ -69,11 +69,8 @@ const login = function(){
   font-family: 'Consola';
 }
 .github{
-    right: 50vw;
-    top: 35vh;
-    position: fixed;
+    margin: 5px;
     display: flex;
-    /* flex: 1; */
     z-index: 17;
     /* flex-direction: column; */
     justify-content: center;
