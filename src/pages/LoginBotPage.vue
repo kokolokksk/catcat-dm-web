@@ -31,17 +31,20 @@ const login = function(){
         <el-card class="box-card">
             <template #header>
             <div class="card-header">
-                <span>CatCat Login</span>
-                <el-button class="button" type="text" @click="login">Login</el-button>
+                <span><b>CatCat</b> 弹幕姬</span>
+                <el-button class="button" type="text" @click="login">进入</el-button>
             </div>
             </template>
             
             <el-form ref="formR"  :model="form" label-width="120px">
-             <el-form-item label="username">
+             <!-- <el-form-item label="username">
                 <el-input v-model="form.name" placeholder="Please input username"></el-input>
               </el-form-item>
               <el-form-item label="password">
                 <el-input v-model="form.pwd" placeholder="Please input password" show-password></el-input>
+              </el-form-item> -->
+              <el-form-item label="clientId">
+                <el-input v-model="form.pwd" placeholder="Please input clientId" show-password></el-input>
               </el-form-item>
             </el-form>
             
