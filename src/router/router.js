@@ -16,6 +16,11 @@ const router = createRouter({
       path: '/loginBot',
       name: 'loginbot',
       component: () => import('../pages/LoginBotPage.vue')
+    },
+    {
+      path: '/catcat',
+      name: 'catcat',
+      component: () => import('../pages/CatCatPage.vue')
     }
   ]
 })

@@ -1,6 +1,7 @@
 import axios from "axios";
 
 axios.defaults.baseURL = 'https://db.loli.monster'  //正式
+//axios.defaults.baseURL = 'http://localhost:8088'  //测试
 
 axios.interceptors.response.use(
   response => {

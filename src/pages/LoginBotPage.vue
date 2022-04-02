@@ -1,8 +1,10 @@
 <script setup> 
 import { ref,reactive } from 'vue'
+import { useRouter } from 'vue-router'
 import request from '../utils/request'
 // 保留颜色渐变动画
 const bgColor = "#f58051" 
+const router = useRouter()
 let form =reactive({}) 
 let formR = ref(null)
 formR.name = "username"
@@ -11,7 +13,7 @@ const login = function(){
   request('/cat/web/login/' + form.pwd).then(e=>{
     console.info(e)
     if (e.data.login  === true){
-      alert('login success')
+      router.push({path:'/catcat',query:{clientId:form.pwd}})
     }
   }).catch(err=>{
     alert(err)
