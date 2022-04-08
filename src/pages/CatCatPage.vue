@@ -1,20 +1,26 @@
 <template>
-  <div style="display:flex;justify-content: center;">
-    <el-table :data="dmList.data" style="width: 800px">
+  <div style="display:flex;left: 30%;
+    position: relative;">
+    <!-- <el-table :data="dmList.data" style="width: 800px">
         
         <el-table-column  label="Name" style="width:100%"  >
           <template #default="scope">
-            <div style="display: flex; align-items: center;">
+            <div style="display: flex; align-items: center;justify-content: center;">
               <el-icon><timer /></el-icon>
               <span style="margin-left: 10px">{{scope.row.nickname}}:{{ scope.row.danmu }} {{dateFormat(new Date(scope.row.time*1000))}}</span>
             </div>
           </template>
         </el-table-column>
       
-      </el-table>
-      
+      </el-table> -->
+      <div>
+        <div v-for="item in dmList.data" :key="item.uuid" style="padding: 5px;text-align: left;">
+          {{item.nickname}}<i>({{dateFormat(new Date(item.time*1000))}})</i> : {{item.danmu}}
+        </div>
+      </div>
   </div>
-  <div class="demo-pagination-block">
+  <div class="demo-pagination-block" style="display:flex;left: 30%;
+    position: relative;">
         <el-pagination
           v-model:currentPage="fenye.page"
           v-model:page-size="fenye.size"
@@ -32,6 +38,7 @@ import { ref,reactive,onMounted,computed } from 'vue'
 import { useRoute,useRouter } from 'vue-router'
 import request from '../utils/request'
 const route = useRoute()
+const router = useRouter()
 const dmList = reactive({
   pager:{},
   data:[]
@@ -78,6 +85,9 @@ const loaddata = async () => {
       return fmt;
   }
 onMounted(async ()=>{
+  if (!route.query.clientId){
+    router.push('/')
+  }
   await loaddata()
 })
 
